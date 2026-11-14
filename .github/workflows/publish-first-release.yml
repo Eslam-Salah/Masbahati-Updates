@@ -1,0 +1,51 @@
+name: Publish first signed Masbahati release
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - ".github/workflows/publish-first-release.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Download signed artifact and validate SHA256
+        env:
+          ARTIFACT_URL: 'https://sdmntpritalynorth.oaiusercontent.com/files/00000000-f220-8246-bedb-6525190aa564/raw?se=2026-11-14T00%3A54%3A42Z&sp=r&sv=2026-06-06&sr=b&scid=4d1cf4c2-59b4-5b77-a3eb-9900a89c6700&skoid=82a3371f-2f6c-4f81-8a78-2701b362559b&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-11-13T18%3A04%3A49Z&ske=2026-11-14T18%3A04%3A49Z&sks=b&skv=2026-06-06&sig=HBtIlK7gYG4SqsNiJt8Z7C0tSEt82kVrnxwX/BVF8Xs%3D'
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl --fail --location --silent --show-error --retry 3 --connect-timeout 15 --max-time 120 --output signed.zip "$ARTIFACT_URL"
+          mkdir -p dist
+          unzip -j signed.zip 'Masbahati-1.0.0.apk' -d dist
+          echo "0f3b8d3c3f9f035eeef53fab22130d84b990a75692bbe896e3f61f9501455c33  dist/Masbahati-1.0.0.apk" | sha256sum --check -
+
+      - name: Publish official GitHub Release
+        shell: bash
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          set -euo pipefail
+          cat > notes.md <<'RELEASE_NOTES'
+          versionCode: 1
+
+          ## مسبحتي — الإصدار الرسمي الأول 1.0.0
+
+          أول نسخة رسمية من تطبيق مسبحتي، وتشمل:
+
+          - **التسبيح اليدوي والصوتي** مع حفظ الجلسات.
+          - **الأذكار والرقية الشرعية**.
+          - **الإحصائيات والسجل**.
+          - **التذكيرات والنسخ الاحتياطي المحلي**.
+          - **التحديثات من داخل التطبيق** وفحص «ما الجديد» عند نشر إصدار أحدث.
+
+          هذا أول إصدار رسمي (Build 1).
+          RELEASE_NOTES
+          gh release view v1.0.0 --repo 'Eslam-Salah/Masbahati-Updates' >/dev/null 2>&1 && { echo "Release already exists; no overwrite"; exit 1; } || true
+          gh release create v1.0.0 dist/Masbahati-1.0.0.apk --repo 'Eslam-Salah/Masbahati-Updates' --title 'مسبحتي 1.0.0 — الإصدار الرسمي الأول' --notes-file notes.md --latest
