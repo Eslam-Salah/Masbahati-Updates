@@ -1,0 +1,115 @@
+name: Publish verified Masbahati 1.0.5 APK
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'release-staging/v1.0.5/manifest.json'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: publish-masbahati-v1.0.5
+  cancel-in-progress: false
+
+jobs:
+  verify-and-publish:
+    if: github.repository == 'Eslam-Salah/Masbahati-Updates'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Reconstruct and independently verify APK SHA256
+        shell: bash
+        run: |
+          set -euo pipefail
+          python3 - <<'PY'
+          from pathlib import Path
+          import base64
+          import hashlib
+          import json
+          path = Path('release-staging/v1.0.5')
+          manifest = json.loads((path / 'manifest.json').read_text(encoding='utf-8'))
+          assert manifest['filename'] == 'Masbahati-1.0.5.apk'
+          assert manifest['version'] == '1.0.5'
+          assert manifest['versionCode'] == 6
+          assert manifest['packageId'] == 'com.abobakr.tasbeeh'
+          assert manifest['signer'].lower() == '9182b5af8ff3e6464b959608f33f4b37c5f6e885cd7dae9c88c23821d1288159'
+          count = manifest['parts']
+          assert isinstance(count, int) and 0 < count < 256
+          parts = sorted(path.glob('chunk-*.txt'))
+          assert len(parts) == count
+          encoded = ''.join((path / f'chunk-{i:03}.txt').read_text(encoding='ascii') for i in range(count))
+          output = base64.b64decode(encoded, validate=True)
+          assert len(output) == manifest['size']
+          digest = hashlib.sha256(output).hexdigest()
+          assert digest == manifest['sha256']
+          Path('Masbahati-1.0.5.apk').write_bytes(output)
+          Path('Masbahati-1.0.5.apk.sha256').write_text(digest + '  Masbahati-1.0.5.apk\n', encoding='utf-8')
+          print('Verified SHA256:', digest)
+          PY
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - uses: android-actions/setup-android@v4
+      - name: Install Android APK signature verification tools
+        run: sdkmanager --install "build-tools;36.0.0"
+
+      - name: Independently verify original signing cert, package and increasing version
+        shell: bash
+        run: |
+          set -euo pipefail
+          "$ANDROID_HOME/build-tools/36.0.0/apksigner" verify --verbose --print-certs Masbahati-1.0.5.apk |
+            grep -Fi '9182b5af8ff3e6464b959608f33f4b37c5f6e885cd7dae9c88c23821d1288159'
+          "$ANDROID_HOME/build-tools/36.0.0/aapt" dump badging Masbahati-1.0.5.apk |
+            grep '^package:' |
+            grep -F "name='com.abobakr.tasbeeh'" |
+            grep -F "versionCode='6'" |
+            grep -F "versionName='1.0.5'"
+
+      - name: Publish a new public release (never replace 1.0.0)
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          if gh release view v1.0.5 --repo "$GITHUB_REPOSITORY" >/dev/null 2>&1; then
+            echo "::error::Release v1.0.5 already exists. Refusing to overwrite."
+            exit 1
+          fi
+          gh release create v1.0.5             Masbahati-1.0.5.apk Masbahati-1.0.5.apk.sha256             --repo "$GITHUB_REPOSITORY"             --title 'مسبحتي 1.0.5 — ظهور تقدم التنزيل وتحسين استقرار التسبيح الصوتي'             --notes-file release-staging/v1.0.5/release-notes.md             --latest
+
+      - name: Verify the published release asset digest
+        shell: bash
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          gh api "repos/$GITHUB_REPOSITORY/releases/tags/v1.0.5" > release-result.json
+          python3 - <<'PY'
+          import hashlib, json
+          from pathlib import Path
+          release=json.loads(Path('release-result.json').read_text())
+          assert release['tag_name']=='v1.0.5' and not release['draft'] and not release['prerelease']
+          asset=next(x for x in release['assets'] if x['name']=='Masbahati-1.0.5.apk')
+          sha=hashlib.sha256(Path('Masbahati-1.0.5.apk').read_bytes()).hexdigest()
+          assert asset.get('digest')=='sha256:'+sha, 'Published asset digest mismatch'
+          print('Public release verified:', release['html_url'])
+          PY
+
+      - name: Remove one-time staging and publishing workflow after verification
+        if: success()
+        continue-on-error: true
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'github-actions[bot]'
+          git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
+          git switch main
+          git rm -r -- release-staging/v1.0.5 .github/workflows/publish-v1-0-5.yml
+          git commit -m 'Clean verified v1.0.5 publication staging'
+          git push origin HEAD:main
