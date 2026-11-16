@@ -1,0 +1,97 @@
+name: One-time verified publication of Masbahati 1.0.9
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/one-time-publish-v1-0-9.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  publish:
+    if: github.repository == 'Eslam-Salah/Masbahati-Updates'
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@v4
+      - name: Retrieve signed release archive (APK and checksum only)
+        env:
+          SIGNED_ARCHIVE_URL: 'https://sdmntpritalynorth.oaiusercontent.com/files/00000000-5b50-8246-a586-0f3ca14284ba/raw?se=2026-11-16T12%3A45%3A02Z&sp=r&sv=2026-06-06&sr=b&scid=9a53cfb3-f0d4-5c65-b1b3-b95c169174d9&skoid=82a3371f-2f6c-4f81-8a78-2701b362559b&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-11-16T06%3A07%3A33Z&ske=2026-11-17T06%3A07%3A33Z&sks=b&skv=2026-06-06&sig=dCznQNHgpUA6jV5jARAArPWR%2Bm13TvI/kXufnYQ0dWE%3D'
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl --fail --show-error --location --retry 4 --retry-all-errors \
+            --connect-timeout 20 --max-time 150 \
+            "$SIGNED_ARCHIVE_URL" -o /tmp/masbahati-v1.0.9-signed.zip
+      - name: Inspect and validate signed artifact SHA-256
+        shell: bash
+        run: |
+          set -euo pipefail
+          mkdir -p dist
+          python3 - <<'PY'
+          import hashlib,zipfile
+          from pathlib import Path
+          name='Masbahati-1.0.9.apk'
+          expected='2f837bb879b7841839871f20e8d6f5c03874b709246f74537cdff5387173d260'
+          with zipfile.ZipFile('/tmp/masbahati-v1.0.9-signed.zip') as archive:
+              names=set(archive.namelist())
+              if names != {name,name+'.sha256'}:
+                  raise RuntimeError('Unexpected archive contents')
+              apk=archive.read(name)
+              checksum=archive.read(name+'.sha256').decode('utf-8').strip()
+          if len(apk)!=2443890:
+              raise RuntimeError('Unexpected signed APK size')
+          digest=hashlib.sha256(apk).hexdigest()
+          if digest!=expected or checksum.split()[0]!=expected:
+              raise RuntimeError('Signed APK checksum mismatch')
+          Path('dist',name).write_bytes(apk)
+          Path('dist',name+'.sha256').write_text(f'{expected}  {name}\n')
+          print('Signed release APK size and SHA-256 verified.')
+          PY
+      - uses: android-actions/setup-android@v4
+      - name: Install Android package verification tools
+        shell: bash
+        run: sdkmanager --install "build-tools;36.0.0"
+      - name: Verify original signer and Android app identity
+        shell: bash
+        run: |
+          set -euo pipefail
+          apk=dist/Masbahati-1.0.9.apk
+          "$ANDROID_HOME/build-tools/36.0.0/apksigner" verify --verbose --print-certs "$apk" |
+            grep -Fi '9182b5af8ff3e6464b959608f33f4b37c5f6e885cd7dae9c88c23821d1288159'
+          "$ANDROID_HOME/build-tools/36.0.0/aapt" dump badging "$apk" |
+            grep '^package:' |
+            grep -F "name='com.abobakr.tasbeeh'" |
+            grep -F "versionCode='10'" |
+            grep -F "versionName='1.0.9'"
+      - name: Publish APK in official public Release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          repo=Eslam-Salah/Masbahati-Updates
+          if gh release view v1.0.9 --repo "$repo" >/dev/null 2>&1; then
+            echo 'Release already exists; checking identity without overwriting.'
+          else
+            gh release create v1.0.9 \
+              dist/Masbahati-1.0.9.apk \
+              dist/Masbahati-1.0.9.apk.sha256 \
+              --repo "$repo" \
+              --title 'مسبحتي 1.0.9' \
+              --notes 'تحديث تصميم صفحة قراءة الأذكار، وتحسين توزيع النص والعداد وشريط التقدم وHands-Free، مع الحفاظ على البيانات والتوقيع الأصلي.' \
+              --latest
+          fi
+          gh api "repos/$repo/releases/tags/v1.0.9" > /tmp/masbahati-published.json
+          python3 - <<'PY'
+          import json
+          from pathlib import Path
+          r=json.loads(Path('/tmp/masbahati-published.json').read_text())
+          assert not r.get('draft') and not r.get('prerelease')
+          a=[x for x in r.get('assets',[]) if x.get('name')=='Masbahati-1.0.9.apk']
+          assert len(a)==1 and a[0].get('digest')=='sha256:2f837bb879b7841839871f20e8d6f5c03874b709246f74537cdff5387173d260'
+          assert any(x.get('name')=='Masbahati-1.0.9.apk.sha256' for x in r.get('assets',[]))
+          print('Public APK and its exact SHA-256 independently verified.')
+          PY
