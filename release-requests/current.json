@@ -1,0 +1,10 @@
+{
+  "version": "1.0.9",
+  "versionCode": 10,
+  "packageId": "com.abobakr.tasbeeh",
+  "size": 2443890,
+  "sha256": "2f837bb879b7841839871f20e8d6f5c03874b709246f74537cdff5387173d260",
+  "signer": "9182b5af8ff3e6464b959608f33f4b37c5f6e885cd7dae9c88c23821d1288159",
+  "signed_archive_url": "https://sdmntpritalynorth.oaiusercontent.com/files/00000000-389c-8246-ab16-4b253ebed556/raw?se=2026-11-16T12%3A50%3A42Z&sp=r&sv=2026-06-06&sr=b&scid=aab76a83-042f-54d8-b8c6-a4a7417ecffd&skoid=82a3371f-2f6c-4f81-8a78-2701b362559b&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-11-16T06%3A34%3A39Z&ske=2026-11-17T06%3A34%3A39Z&sks=b&skv=2026-06-06&sig=ro66xBW06xv49UAOwk1Z2qHLCu2XI7SFSYuoLJpnhOI%3D",
+  "notes": "تحديث لتحسين تصميم صفحة قراءة الأذكار، وتنظيم عنوان القسم وشريط التقدم، وتسهيل قراءة النصوص الطويلة، وتوضيح عداد التكرار وأزرار التسبيح وHands-Free، مع الحفاظ على الأذكار والعدادات والبيانات الحالية."
+}
