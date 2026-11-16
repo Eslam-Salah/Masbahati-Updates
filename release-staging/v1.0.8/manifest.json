@@ -1,0 +1,11 @@
+{
+  "filename": "Masbahati-1.0.8.apk",
+  "version": "1.0.8",
+  "versionCode": 9,
+  "packageId": "com.abobakr.tasbeeh",
+  "size": 2443877,
+  "sha256": "8997e38ae40f56e46c4283491284c5b84aade2166604b5e3a3062e538d9dd636",
+  "parts": 55,
+  "chunkChars": 60000,
+  "signer": "9182b5af8ff3e6464b959608f33f4b37c5f6e885cd7dae9c88c23821d1288159"
+}
