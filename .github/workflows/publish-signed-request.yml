@@ -108,7 +108,7 @@ jobs:
       - name: Publish or independently verify existing GitHub Release
         shell: bash
         env:
-          VERSION: __VERSION__
+          VERSION: ${{ steps.release.outputs.version }}
           EXPECTED_SHA: ${{ steps.release.outputs.sha }}
           GH_TOKEN: ${{ github.token }}
         run: |
