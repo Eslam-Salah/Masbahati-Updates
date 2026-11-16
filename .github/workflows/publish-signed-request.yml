@@ -52,7 +52,36 @@ jobs:
               f.write(f'version={version}\ncode={code}\nsha={sha}\nsize={size}\n')
           print(f'Validated request for v{version} / Build {code}')
           PY
+      - name: Skip duplicate release only after matching published APK digest
+        id: published
+        env:
+          GH_TOKEN: ${{ github.token }}
+          VERSION: ${{ steps.release.outputs.version }}
+          EXPECTED_SHA: ${{ steps.release.outputs.sha }}
+        shell: bash
+        run: |
+          set -euo pipefail
+          repo=Eslam-Salah/Masbahati-Updates
+          if gh release view "v$VERSION" --repo "$repo" >/dev/null 2>&1; then
+            gh api "repos/$repo/releases/tags/v$VERSION" > /tmp/masbahati-existing.json
+            python3 - <<'PY'
+          import json,os
+          from pathlib import Path
+          release=json.loads(Path('/tmp/masbahati-existing.json').read_text())
+          assert not release.get('draft') and not release.get('prerelease')
+          filename='Masbahati-'+os.environ['VERSION']+'.apk'
+          files=[a for a in release.get('assets',[]) if a.get('name')==filename]
+          assert len(files)==1
+          assert files[0].get('digest')=='sha256:'+os.environ['EXPECTED_SHA'], 'Existing release has different APK bytes'
+          assert any(a.get('name')==filename+'.sha256' for a in release['assets'])
+          print('Release already published with matching APK digest.')
+          PY
+            echo 'skip=true' >> "$GITHUB_OUTPUT"
+          else
+            echo 'skip=false' >> "$GITHUB_OUTPUT"
+          fi
       - name: Fetch private signed APK transfer archive
+        if: steps.published.outputs.skip != 'true'
         shell: bash
         run: |
           set -euo pipefail
@@ -68,6 +97,7 @@ jobs:
           )
           PY
       - name: Extract original signed APK and check exact SHA-256
+        if: steps.published.outputs.skip != 'true'
         shell: bash
         run: |
           set -euo pipefail
@@ -88,9 +118,12 @@ jobs:
           print(f'APK size and original SHA-256 validated: {calculated}')
           PY
       - uses: android-actions/setup-android@v4
+        if: steps.published.outputs.skip != 'true'
       - name: Install Android package verification tools
+        if: steps.published.outputs.skip != 'true'
         run: sdkmanager --install "build-tools;36.0.0"
       - name: Verify original app signature and version before publication
+        if: steps.published.outputs.skip != 'true'
         shell: bash
         env:
           VERSION: ${{ steps.release.outputs.version }}
