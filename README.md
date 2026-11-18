@@ -4,19 +4,20 @@
 
 ## أحدث إصدار رسمي
 
-- **الإصدار:** 1.0.1
-- **رقم البناء:** 2
-- **الوسم:** `v1.0.1`
-- **تنزيل مباشر:** [Masbahati-1.0.1.apk](https://github.com/Eslam-Salah/Masbahati-Updates/releases/download/v1.0.1/Masbahati-1.0.1.apk)
-- **صفحة الإصدار:** https://github.com/Eslam-Salah/Masbahati-Updates/releases/tag/v1.0.1
-- **SHA-256:** `6d2ff9eeae26b51c610948c2e27890df427ef78093d38676a4e0a9c78ea2ac5e`
+- **الإصدار:** 1.0.11
+- **رقم البناء:** 12
+- **الوسم:** `v1.0.11`
+- **تنزيل مباشر:** [Masbahati-1.0.11.apk](https://github.com/Eslam-Salah/Masbahati-Updates/releases/download/v1.0.11/Masbahati-1.0.11.apk)
+- **صفحة الإصدار:** https://github.com/Eslam-Salah/Masbahati-Updates/releases/tag/v1.0.11
+- **SHA-256:** `f54ce21278bf3a380d498c2a0d63e1b34b130f5d4eac30b2211ace3d6aa6812f`
 
-تحديث صيانة وتحسين للأداء والثبات بدون إضافة مميزات جديدة. اجتاز اختبارات الوحدة وفحص جودة الكود، وتم التحقق من شهادة التوقيع الأصلية واسم الحزمة `com.abobakr.tasbeeh` والإصدار ورقم البناء وبصمة ملف APK المنشور.
+تحديث لتحسين دقة نسبة تنزيل APK من داخل التطبيق: لا تظهر 100% إلا بعد التحقق من الحجم وSHA-256 وهوية الحزمة ورقم الإصدار. اجتازت النسخة اختبارات Android وLint وفحص شهادة التوقيع الأصلية وتطابق ملف APK المنشور مع الملف الموقّع.
 
-**الاختبار على هاتف فعلي لم يُجرَ بعد:** يُنصح بالاحتفاظ بنسخة احتياطية من البيانات، ثم تثبيت `1.0.1` فوق `1.0.0` مباشرة دون حذف التطبيق.
+**التثبيت على جهاز فعلي مع الاحتفاظ بالبيانات ما زال بحاجة إلى تأكيد من مستخدم التطبيق.** يُنصح بالاحتفاظ بنسخة احتياطية قبل التحديث، ثم تثبيت الإصدار فوق التطبيق القديم دون حذفه.
 
 ## الإصدارات السابقة
 
+- **1.0.10 — Build 11:** [تحميل APK](https://github.com/Eslam-Salah/Masbahati-Updates/releases/download/v1.0.10/Masbahati-1.0.10.apk) · [ملاحظات الإصدار](https://github.com/Eslam-Salah/Masbahati-Updates/releases/tag/v1.0.10)
 - **1.0.0 — Build 1:** [تحميل APK](https://github.com/Eslam-Salah/Masbahati-Updates/releases/download/v1.0.0/Masbahati-1.0.0.apk) · [ملاحظات الإصدار](https://github.com/Eslam-Salah/Masbahati-Updates/releases/tag/v1.0.0)
 
 ## التحديث من داخل التطبيق
