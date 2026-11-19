@@ -4,19 +4,20 @@
 
 ## أحدث إصدار رسمي
 
-- **الإصدار:** 1.0.15
-- **رقم البناء:** 16
-- **الوسم:** `v1.0.15`
-- **تنزيل APK مباشرة:** [Masbahati-1.0.15.apk](https://github.com/Eslam-Salah/Masbahati-Updates/releases/download/v1.0.15/Masbahati-1.0.15.apk)
-- **صفحة الإصدار:** https://github.com/Eslam-Salah/Masbahati-Updates/releases/tag/v1.0.15
-- **SHA-256:** `4d4a67dd5fb1e315974e1466070ba3a8b949a17942842d35b359b62524d6dd2c`
+- **الإصدار:** 1.0.16
+- **رقم البناء:** 17
+- **الوسم:** `v1.0.16`
+- **تنزيل APK مباشرة:** [Masbahati-1.0.16.apk](https://github.com/Eslam-Salah/Masbahati-Updates/releases/download/v1.0.16/Masbahati-1.0.16.apk)
+- **صفحة الإصدار:** https://github.com/Eslam-Salah/Masbahati-Updates/releases/tag/v1.0.16
+- **SHA-256:** `2c9fce549bce9aa579c226acb9ba8a3d80c747215e797697783f551c28fd1ce0`
 
-أصبح عداد التسبيح يضبط حجم الرقم حسب طوله في الوضعين اليدوي والصوتي، مع اختصار أسماء الأوضاع في الشاشات الضيقة وتقليل الحركات الزائدة في العداد وبطاقات الأذكار. كما تحسّن أداء احتساب تقدم ورد اليوم على الواجهة دون تغيير البيانات.
+تحسّن عرض عناوين بطاقات الأذكار على الشاشات الصغيرة بإبعاد شارة التقدم عن سطر العنوان. كما أصبحت مناطق لمس Hands-Free ووقفه المؤقت أكبر وأسهل استخدامًا، مع أوصاف TalkBack أوضح لأزرار التنقل والتشغيل والإيقاف.
 
-اجتاز الإصدار اختبارات Android وLint وبناء Release وتوقيعه بالمفتاح الأصلي، والتحقق من الحزمة ورقم البناء وSHA-256 داخل المستودع الخاص والمستودع العام. **ما زالت تجربة الصوت وHands-Free والشكل على الهاتف الفعلي خطوة تحقق منفصلة.**
+اجتاز الإصدار اختبارات Android وLint وDebug وRelease وفحص الشهادة الأصلية وSHA-256 قبل النشر، ثم تحقق المستودع العام من ملف APK الموقّع مرة ثانية. **لا يغني ذلك عن فحص وضوح الواجهة وصحة الاستماع على هاتف Android فعلي.**
 
 ## الإصدارات السابقة
 
+- **1.0.15 — Build 16:** [تحميل APK](https://github.com/Eslam-Salah/Masbahati-Updates/releases/download/v1.0.15/Masbahati-1.0.15.apk) · [ملاحظات الإصدار](https://github.com/Eslam-Salah/Masbahati-Updates/releases/tag/v1.0.15)
 - **1.0.14 — Build 15:** [تحميل APK](https://github.com/Eslam-Salah/Masbahati-Updates/releases/download/v1.0.14/Masbahati-1.0.14.apk) · [ملاحظات الإصدار](https://github.com/Eslam-Salah/Masbahati-Updates/releases/tag/v1.0.14)
 - **1.0.13 — Build 14:** [تحميل APK](https://github.com/Eslam-Salah/Masbahati-Updates/releases/download/v1.0.13/Masbahati-1.0.13.apk) · [ملاحظات الإصدار](https://github.com/Eslam-Salah/Masbahati-Updates/releases/tag/v1.0.13)
 - **1.0.12 — Build 13:** [تحميل APK](https://github.com/Eslam-Salah/Masbahati-Updates/releases/download/v1.0.12/Masbahati-1.0.12.apk) · [ملاحظات الإصدار](https://github.com/Eslam-Salah/Masbahati-Updates/releases/tag/v1.0.12)
