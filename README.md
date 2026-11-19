@@ -4,19 +4,20 @@
 
 ## أحدث إصدار رسمي
 
-- **الإصدار:** 1.0.11
-- **رقم البناء:** 12
-- **الوسم:** `v1.0.11`
-- **تنزيل مباشر:** [Masbahati-1.0.11.apk](https://github.com/Eslam-Salah/Masbahati-Updates/releases/download/v1.0.11/Masbahati-1.0.11.apk)
-- **صفحة الإصدار:** https://github.com/Eslam-Salah/Masbahati-Updates/releases/tag/v1.0.11
-- **SHA-256:** `f54ce21278bf3a380d498c2a0d63e1b34b130f5d4eac30b2211ace3d6aa6812f`
+- **الإصدار:** 1.0.12
+- **رقم البناء:** 13
+- **الوسم:** `v1.0.12`
+- **تنزيل مباشر:** [Masbahati-1.0.12.apk](https://github.com/Eslam-Salah/Masbahati-Updates/releases/download/v1.0.12/Masbahati-1.0.12.apk)
+- **صفحة الإصدار:** https://github.com/Eslam-Salah/Masbahati-Updates/releases/tag/v1.0.12
+- **SHA-256:** `f5235152eca5e6f69d0eeb566bd699bae4b7ec54fa089d1ec24859aee0fe9103`
 
-تحديث لتحسين دقة نسبة تنزيل APK من داخل التطبيق: لا تظهر 100% إلا بعد التحقق من الحجم وSHA-256 وهوية الحزمة ورقم الإصدار. اجتازت النسخة اختبارات Android وLint وفحص شهادة التوقيع الأصلية وتطابق ملف APK المنشور مع الملف الموقّع.
+يُحسّن الإصدار ظهور التحديثات عبر تقليل فترة الفحص التلقائي إلى 5 دقائق وإعادة جلب بيانات GitHub مباشرة وعرض أخطاء الاتصال بشكل أوضح. نجحت اختبارات Android وLint، وتم بناء Release موقّع بالشهادة الأصلية والتحقق من APK المنشور مستقلاً بواسطة `apksigner` و`aapt` وSHA-256.
 
-**التثبيت على جهاز فعلي مع الاحتفاظ بالبيانات ما زال بحاجة إلى تأكيد من مستخدم التطبيق.** يُنصح بالاحتفاظ بنسخة احتياطية قبل التحديث، ثم تثبيت الإصدار فوق التطبيق القديم دون حذفه.
+**ما زال اختبار التحديث على هاتف فعلي من v1.0.11 إلى v1.0.12 بحاجة إلى تأكيد.** ثبّته فوق الإصدار السابق دون حذف التطبيق للحفاظ على البيانات، واحتفظ بنسخة احتياطية إذا أمكن.
 
 ## الإصدارات السابقة
 
+- **1.0.11 — Build 12:** [تحميل APK](https://github.com/Eslam-Salah/Masbahati-Updates/releases/download/v1.0.11/Masbahati-1.0.11.apk) · [ملاحظات الإصدار](https://github.com/Eslam-Salah/Masbahati-Updates/releases/tag/v1.0.11)
 - **1.0.10 — Build 11:** [تحميل APK](https://github.com/Eslam-Salah/Masbahati-Updates/releases/download/v1.0.10/Masbahati-1.0.10.apk) · [ملاحظات الإصدار](https://github.com/Eslam-Salah/Masbahati-Updates/releases/tag/v1.0.10)
 - **1.0.0 — Build 1:** [تحميل APK](https://github.com/Eslam-Salah/Masbahati-Updates/releases/download/v1.0.0/Masbahati-1.0.0.apk) · [ملاحظات الإصدار](https://github.com/Eslam-Salah/Masbahati-Updates/releases/tag/v1.0.0)
 
