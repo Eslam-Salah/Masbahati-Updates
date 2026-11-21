@@ -4,18 +4,21 @@
 
 ## أحدث إصدار رسمي
 
-- **الإصدار:** 1.0.25
-- **رقم البناء:** 26
-- **الوسم:** `v1.0.25`
-- **تنزيل APK مباشرة:** [Masbahati-1.0.25.apk](https://github.com/Eslam-Salah/Masbahati-Updates/releases/download/v1.0.25/Masbahati-1.0.25.apk)
-- **صفحة الإصدار:** https://github.com/Eslam-Salah/Masbahati-Updates/releases/tag/v1.0.25
-- **SHA-256:** `c354ab691b3a48c702ee5f5c0086f898b94c7d4c596af0019824ce269d165408`
+- **الإصدار:** 1.0.26
+- **رقم البناء:** 27
+- **الوسم:** `v1.0.26`
+- **تنزيل APK مباشرة:** [Masbahati-1.0.26.apk](https://github.com/Eslam-Salah/Masbahati-Updates/releases/download/v1.0.26/Masbahati-1.0.26.apk)
+- **صفحة الإصدار:** https://github.com/Eslam-Salah/Masbahati-Updates/releases/tag/v1.0.26
+- **SHA-256:** `97a7ae5d83bf3dc8af181b429755f739c71eafb0668cd7f7c48e7e86a0a48d2b`
 
-تضيف النسخة التاريخ الهجري والميلادي في أعلى الرئيسية، مع 3 اختيارات ضمن الإعدادات: عرض الاثنين (الافتراضي)، الهجري فقط، أو الميلادي فقط. يُحفظ اختيار المستخدم ضمن بيانات الإعدادات والنسخ الاحتياطية. الحساب الهجري محلي بلا إنترنت، وهو **تقريبي** وقد يختلف حسب رؤية الهلال والبلد.
+تحسين بصري لكروت أقسام الأذكار: توحيد ارتفاع الكروت في الصف، ملء الخلفية المتدرجة بالكامل، ضبط توسيط المحتوى والتعامل مع العناوين العربية الطويلة. لا توجد ترحيلات بيانات أو تغييرات في تقدم الأذكار أو سجل التسبيح.
 
-نجحت فحوص JVM وAndroid Lint وDebug والتوقيع الأصلي، والتحقق المستقل من البصمة والشهادة والحجم والحزمة وBuild 26 عند النشر العام. ما زالت مطلوبة تجربة Android 23 و24+ والوقت والمنطقة الزمنية وRTL والخط الكبير وTalkBack على هاتف فعلي. ثبّت فوق النسخة الحالية دون حذف التطبيق.
+نجحت اختبارات JVM وAndroid Lint وبناء Debug وRelease، والتحقق من شهادة التوقيع الأصلية والحزمة ورقم البناء وبصمة الملف عند النشر العام. لا تزال تجربة واجهة الأذكار في الوضعين النهاري والليلي وRTL والخط الكبير وTalkBack على هاتف فعلي مطلوبة. ثبّت فوق النسخة الحالية دون حذف التطبيق.
 
 ## الإصدارات السابقة
+
+- **1.0.25 — Build 26:** [تحميل APK](https://github.com/Eslam-Salah/Masbahati-Updates/releases/download/v1.0.25/Masbahati-1.0.25.apk) · [ملاحظات الإصدار](https://github.com/Eslam-Salah/Masbahati-Updates/releases/tag/v1.0.25)
+
 
 - **1.0.24 — Build 25:** [تحميل APK](https://github.com/Eslam-Salah/Masbahati-Updates/releases/download/v1.0.24/Masbahati-1.0.24.apk) · [ملاحظات الإصدار](https://github.com/Eslam-Salah/Masbahati-Updates/releases/tag/v1.0.24)
 - **1.0.23 — Build 24:** [تحميل APK](https://github.com/Eslam-Salah/Masbahati-Updates/releases/download/v1.0.23/Masbahati-1.0.23.apk) · [ملاحظات الإصدار](https://github.com/Eslam-Salah/Masbahati-Updates/releases/tag/v1.0.23)
