@@ -4,19 +4,23 @@
 
 ## أحدث إصدار رسمي
 
-- **الإصدار:** 1.0.27
-- **رقم البناء:** 28
-- **الوسم:** `v1.0.27`
-- **تنزيل APK مباشرة:** [Masbahati-1.0.27.apk](https://github.com/Eslam-Salah/Masbahati-Updates/releases/download/v1.0.27/Masbahati-1.0.27.apk)
-- **صفحة الإصدار:** https://github.com/Eslam-Salah/Masbahati-Updates/releases/tag/v1.0.27
-- **الحجم:** 2,476,648 بايت
-- **SHA-256:** `65e1dbdfb2b8c95de92458c0ee6ec88992078040cc204299c55f9fc00c2d2d19`
+- **الإصدار:** 1.0.28
+- **رقم البناء:** 29
+- **الوسم:** `v1.0.28`
+- **تنزيل APK مباشرة:** [Masbahati-1.0.28.apk](https://github.com/Eslam-Salah/Masbahati-Updates/releases/download/v1.0.28/Masbahati-1.0.28.apk)
+- **صفحة الإصدار:** https://github.com/Eslam-Salah/Masbahati-Updates/releases/tag/v1.0.28
+- **الحجم:** 2,493,030 بايت
+- **SHA-256:** `a3525dcd5d8681836cc6f4d0389672861bc9bcd99fa870289b46fe347aec05c4`
 
-تضيف v1.0.27 بطاقة أقرب مناسبة إسلامية على الرئيسية مع اسمها والتاريخين الهجري والميلادي وعدّ تنازلي بالدقائق، وصفحة مستقلة لجميع المناسبات القادمة مرتبة زمنيًا مع تصنيف دقيق للأعياد والمواسم والأيام والتواريخ التقليدية. تعمل الحسابات دون إنترنت بتقويم أم القرى على Android 7 فأحدث، وببديل هجري مدني تقديري على Android 6. **التواريخ الهجرية المستقبلية تقديرية وقد تختلف عن إعلان رؤية الهلال في بلد المستخدم**.
+تحديث v1.0.28 يعيد تصميم الصفحة الرئيسية: بطاقة ترحيب تضم التاريخ الهجري والميلادي بحسب تفضيل المستخدم، وبطاقة مناسبات بنفسجية وذهبية في نهاية الرئيسية، مع عد تنازلي بالأيام فقط، وتحسينات للتوقيت المحلي والتوقيت الصيفي وواجهات RTL. تفاصيل التغييرات في [ملاحظات الإصدار](https://github.com/Eslam-Salah/Masbahati-Updates/releases/tag/v1.0.28).
 
-نجح Windows JVM/Android Lint/Debug وRelease الموقّع بالمفتاح الأصلي؛ كما اجتاز APK المنشور التحقق المستقل من الحزمة والشهادة ورقم البناء والحجم وSHA-256. لا توجد ترحيلات Room ولا تغيير لبيانات التسبيح أو الأذكار أو إعداداتها. ما زال اختبار تجربة القائمة والعد عند منتصف الليل وRTL/الخط الكبير/TalkBack على هاتف فعلي مطلوبًا. يمكن التثبيت فوق النسخة الحالية دون حذفها.
+**طريقة النشر:** اكتملت اختبارات JVM وAndroid Lint وبناء Debug وRelease والتوقيع الأصلي والتحقق من الهوية، في [Windows Signed QA](https://github.com/Eslam-Salah/Masbahati-Android/actions/runs/45019011028). فشل رفع الـArtifact الخاص فقط بسبب حصة التخزين؛ ونُقل ملف APK الموقّع والمتطابق SHA-256 مباشرة من جهاز Windows إلى GitHub Releases يوم 23 نوفمبر 2026، وتحقق GitHub بعد النشر من وجود APK وملف SHA-256 ومن البصمة والحجم. **هذا الإصدار منشور رسميًا، وليس نجاحًا شاملاً لكل خطوات Workflow**.
+
+يحافظ التحديث على بيانات المستخدم وشهادة التوقيع الأصلية، ولا يغير مخطط Room. لا تزال مراجعة الترقية داخل التطبيق و«ما الجديد» والصوت وRTL والخط الكبير وTalkBack والشاشات 320/360/400dp على هاتف Android فعلي مطلوبة؛ نجاح الاختبارات البرمجية لا يثبت هذه الجوانب.
 
 ## الإصدارات السابقة
+
+- **1.0.27 — Build 28:** [تحميل APK](https://github.com/Eslam-Salah/Masbahati-Updates/releases/download/v1.0.27/Masbahati-1.0.27.apk) · [ملاحظات الإصدار](https://github.com/Eslam-Salah/Masbahati-Updates/releases/tag/v1.0.27)
 
 - **1.0.26 — Build 27:** [تحميل APK](https://github.com/Eslam-Salah/Masbahati-Updates/releases/download/v1.0.26/Masbahati-1.0.26.apk) · [ملاحظات الإصدار](https://github.com/Eslam-Salah/Masbahati-Updates/releases/tag/v1.0.26)
 
