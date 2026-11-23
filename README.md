@@ -4,21 +4,23 @@
 
 ## أحدث إصدار رسمي
 
-- **الإصدار:** 1.0.28
-- **رقم البناء:** 29
-- **الوسم:** `v1.0.28`
-- **تنزيل APK مباشرة:** [Masbahati-1.0.28.apk](https://github.com/Eslam-Salah/Masbahati-Updates/releases/download/v1.0.28/Masbahati-1.0.28.apk)
-- **صفحة الإصدار:** https://github.com/Eslam-Salah/Masbahati-Updates/releases/tag/v1.0.28
+- **الإصدار:** 1.0.29
+- **رقم البناء:** 30
+- **الوسم:** `v1.0.29`
+- **تنزيل APK مباشرة:** [Masbahati-1.0.29.apk](https://github.com/Eslam-Salah/Masbahati-Updates/releases/download/v1.0.29/Masbahati-1.0.29.apk)
+- **صفحة الإصدار:** https://github.com/Eslam-Salah/Masbahati-Updates/releases/tag/v1.0.29
 - **الحجم:** 2,493,030 بايت
-- **SHA-256:** `a3525dcd5d8681836cc6f4d0389672861bc9bcd99fa870289b46fe347aec05c4`
+- **SHA-256:** `a191ef4aff999ccb5ea81c681b3610c4e1d7fdd8114190e3d9692a26b7e86496`
 
-تحديث v1.0.28 يعيد تصميم الصفحة الرئيسية: بطاقة ترحيب تضم التاريخ الهجري والميلادي بحسب تفضيل المستخدم، وبطاقة مناسبات بنفسجية وذهبية في نهاية الرئيسية، مع عد تنازلي بالأيام فقط، وتحسينات للتوقيت المحلي والتوقيت الصيفي وواجهات RTL. تفاصيل التغييرات في [ملاحظات الإصدار](https://github.com/Eslam-Salah/Masbahati-Updates/releases/tag/v1.0.28).
+يعيد v1.0.29 كارت «السلام عليكم ورحمة الله وبركاته» وكارت «أقرب مناسبة» إلى هوية مسبحتي الأساسية الخضراء والذهبية، ويعرض التاريخ الهجري والميلادي في شريحتين صغيرتين ومتجاورتين عند اتساع الشاشة، بدلًا من المربعات الكبيرة. بطاقة المناسبات أبسط وأكثر اتساقًا مع باقي الرئيسية، مع الحفاظ على العد بالأيام وفتح صفحة المناسبات. تفاصيل التغييرات في [ملاحظات الإصدار](https://github.com/Eslam-Salah/Masbahati-Updates/releases/tag/v1.0.29).
 
-**طريقة النشر:** اكتملت اختبارات JVM وAndroid Lint وبناء Debug وRelease والتوقيع الأصلي والتحقق من الهوية، في [Windows Signed QA](https://github.com/Eslam-Salah/Masbahati-Android/actions/runs/45019011028). فشل رفع الـArtifact الخاص فقط بسبب حصة التخزين؛ ونُقل ملف APK الموقّع والمتطابق SHA-256 مباشرة من جهاز Windows إلى GitHub Releases يوم 23 نوفمبر 2026، وتحقق GitHub بعد النشر من وجود APK وملف SHA-256 ومن البصمة والحجم. **هذا الإصدار منشور رسميًا، وليس نجاحًا شاملاً لكل خطوات Workflow**.
+**الفحص والنشر:** نجحت اختبارات Windows JVM وAndroid Lint وبناء Debug على [مرشح Build 30](https://github.com/Eslam-Salah/Masbahati-Android/actions/runs/45220502621) وعلى [main](https://github.com/Eslam-Salah/Masbahati-Android/actions/runs/45223607823). تم نشر ملف APK مباشرة من Windows إلى GitHub Releases بعد بناء وتوقيع الإصدار عبر السكربت المحلي الأصلي، دون استهلاك مساحة Actions Artifacts. GitHub يؤكد وجود ملفي APK وSHA-256 وبصمة APK المنشورة وحجمها. هذا ليس اختبارًا فعليًا للشاشات أو لتجربة تثبيت التحديث على جهاز المستخدم.
 
-يحافظ التحديث على بيانات المستخدم وشهادة التوقيع الأصلية، ولا يغير مخطط Room. لا تزال مراجعة الترقية داخل التطبيق و«ما الجديد» والصوت وRTL والخط الكبير وTalkBack والشاشات 320/360/400dp على هاتف Android فعلي مطلوبة؛ نجاح الاختبارات البرمجية لا يثبت هذه الجوانب.
+لا يغير الإصدار قاعدة Room أو بيانات التسبيح والأذكار أو هوية الحزمة وشهادة التوقيع الأصلية. **ما زال اختبار التحديث على هاتف حقيقي، وRTL والخط الكبير وTalkBack والتباين العالي والوضعين الداكن والفاتح، مطلوبًا.**
 
 ## الإصدارات السابقة
+
+- **1.0.28 — Build 29:** [تحميل APK](https://github.com/Eslam-Salah/Masbahati-Updates/releases/download/v1.0.28/Masbahati-1.0.28.apk) · [ملاحظات الإصدار](https://github.com/Eslam-Salah/Masbahati-Updates/releases/tag/v1.0.28)
 
 - **1.0.27 — Build 28:** [تحميل APK](https://github.com/Eslam-Salah/Masbahati-Updates/releases/download/v1.0.27/Masbahati-1.0.27.apk) · [ملاحظات الإصدار](https://github.com/Eslam-Salah/Masbahati-Updates/releases/tag/v1.0.27)
 
