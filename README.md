@@ -4,19 +4,21 @@
 
 ## أحدث إصدار رسمي
 
-- **الإصدار:** 1.0.30
-- **رقم البناء:** 31
-- **الوسم:** `v1.0.30`
-- **تنزيل APK مباشرة:** [Masbahati-1.0.30.apk](https://github.com/Eslam-Salah/Masbahati-Updates/releases/download/v1.0.30/Masbahati-1.0.30.apk)
-- **صفحة الإصدار:** https://github.com/Eslam-Salah/Masbahati-Updates/releases/tag/v1.0.30
+- **الإصدار:** 1.0.31
+- **رقم البناء:** 32
+- **الوسم:** `v1.0.31`
+- **تنزيل APK:** [Masbahati-1.0.31.apk](https://github.com/Eslam-Salah/Masbahati-Updates/releases/download/v1.0.31/Masbahati-1.0.31.apk)
+- **صفحة الإصدار:** https://github.com/Eslam-Salah/Masbahati-Updates/releases/tag/v1.0.31
 - **الحجم:** 2,493,035 بايت
-- **SHA-256:** `8dcb3f4fd6f01612912d16b3731d18d1bf9e954abb5b4955de18f019ba9b7241`
+- **SHA-256 بحسب GitHub:** `44f26c1e609a8126a111ab081183d7a61563aff2d00daf5d208955097112d338`
 
-يعالج هذا التحديث تكرار البحث عن تحديثات GitHub أثناء انقطاع الإنترنت. عند فشل فحص تلقائي يستخدم التطبيق انتظارًا مدته دقيقتان قبل إعادة المحاولة تلقائيًا، من دون تعطيل زر «البحث عن تحديثات» اليدوي أو عرض خطأ DNS تقني. لا تغيير في بيانات المستخدم أو الحسابات أو قاعدة Room أو طريقة تنزيل وتثبيت APK.
+تحديث v1.0.31 يحسن نافذة «مصدر الذكر» بتنسيق المصدر والمرجع وتثبيت العنوان والأزرار حول محتوى قابل للتمرير، مع ترتيب أفضل للأزرار على الشاشات الضيقة، وحصر فتح الروابط في مصادر HTTPS الموثوقة.
 
-**توثيق الاختبارات:** نجح [Windows JVM/Lint/Debug للفرع](https://github.com/Eslam-Salah/Masbahati-Android/actions/runs/45234636922)، ثم [اختبار main بعد إصلاح الكود](https://github.com/Eslam-Salah/Masbahati-Android/actions/runs/45236358409)، ثم [اختبار main لإصدار Build 31](https://github.com/Eslam-Salah/Masbahati-Android/actions/runs/45259256798). نُشر APK مباشرة إلى GitHub Releases بدون رفع Actions Artifacts، ويمكن التحقق من حجم الملف والبصمة المعروضة هنا. **لم تُختبر عملية التحديث ولا عمل الفحص التلقائي أثناء انقطاع/عودة الإنترنت على هاتف فعلي ضمن هذه الاختبارات.**
+نجحت اختبارات Windows JVM/Android Lint/Debug في [فرع التحسين](https://github.com/Eslam-Salah/Masbahati-Android/actions/runs/45265605862)، و[main بعد الدمج](https://github.com/Eslam-Salah/Masbahati-Android/actions/runs/45270369782)، و[Build 32](https://github.com/Eslam-Salah/Masbahati-Android/actions/runs/45272057297). يتضمن النشر ملف APK وملف SHA-256. مراجعة التثبيت والتحديث على هاتف حقيقي وRTL والخط الكبير وTalkBack ما زالت مطلوبة.
 
 ## الإصدارات السابقة
+
+- **1.0.30 — Build 31:** [تحميل APK](https://github.com/Eslam-Salah/Masbahati-Updates/releases/download/v1.0.30/Masbahati-1.0.30.apk) · [ملاحظات الإصدار](https://github.com/Eslam-Salah/Masbahati-Updates/releases/tag/v1.0.30)
 
 - **1.0.29 — Build 30:** [تحميل APK](https://github.com/Eslam-Salah/Masbahati-Updates/releases/download/v1.0.29/Masbahati-1.0.29.apk) · [ملاحظات الإصدار](https://github.com/Eslam-Salah/Masbahati-Updates/releases/tag/v1.0.29)
 
