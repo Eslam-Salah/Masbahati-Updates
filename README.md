@@ -4,19 +4,21 @@
 
 ## أحدث إصدار رسمي
 
-- **الإصدار:** 1.0.31
-- **رقم البناء:** 32
-- **الوسم:** `v1.0.31`
-- **تنزيل APK:** [Masbahati-1.0.31.apk](https://github.com/Eslam-Salah/Masbahati-Updates/releases/download/v1.0.31/Masbahati-1.0.31.apk)
-- **صفحة الإصدار:** https://github.com/Eslam-Salah/Masbahati-Updates/releases/tag/v1.0.31
-- **الحجم:** 2,493,035 بايت
-- **SHA-256 بحسب GitHub:** `44f26c1e609a8126a111ab081183d7a61563aff2d00daf5d208955097112d338`
+- **الإصدار:** 1.0.32
+- **رقم البناء:** 33
+- **الوسم:** `v1.0.32`
+- **APK:** [Masbahati-1.0.32.apk](https://github.com/Eslam-Salah/Masbahati-Updates/releases/download/v1.0.32/Masbahati-1.0.32.apk)
+- **صفحة الإصدار:** https://github.com/Eslam-Salah/Masbahati-Updates/releases/tag/v1.0.32
+- **الحجم:** 2,493,026 بايت
+- **SHA-256 بحسب GitHub:** `9d431573a00ce5e121d61d5de45fba53b0088b784126dd591bac30986497258f`
 
-تحديث v1.0.31 يحسن نافذة «مصدر الذكر» بتنسيق المصدر والمرجع وتثبيت العنوان والأزرار حول محتوى قابل للتمرير، مع ترتيب أفضل للأزرار على الشاشات الضيقة، وحصر فتح الروابط في مصادر HTTPS الموثوقة.
+يجمع v1.0.32 تحسين شكل كروت أقسام الأذكار وتصغيرها، مع تحسين وضوح خيار العد بالضغط الاختياري ورسالة مدة قراءة الورد. بطاقات الأقسام تحافظ على تساوي ارتفاع الصف وامتداد الخلفية حتى مع تقدم جزئي أو اكتمال القسم.
 
-نجحت اختبارات Windows JVM/Android Lint/Debug في [فرع التحسين](https://github.com/Eslam-Salah/Masbahati-Android/actions/runs/45265605862)، و[main بعد الدمج](https://github.com/Eslam-Salah/Masbahati-Android/actions/runs/45270369782)، و[Build 32](https://github.com/Eslam-Salah/Masbahati-Android/actions/runs/45272057297). يتضمن النشر ملف APK وملف SHA-256. مراجعة التثبيت والتحديث على هاتف حقيقي وRTL والخط الكبير وTalkBack ما زالت مطلوبة.
+نجحت اختبارات Windows JVM وAndroid Lint وDebug في [اختبار التعديل](https://github.com/Eslam-Salah/Masbahati-Android/actions/runs/45276577055)، و[اختبار main](https://github.com/Eslam-Salah/Masbahati-Android/actions/runs/45278003102)، و[Build 33 النهائي](https://github.com/Eslam-Salah/Masbahati-Android/actions/runs/45279281320). APK وملف checksum منشوران؛ وما زال التحقق من العرض والتثبيت على هاتف فعلي مطلوبًا.
 
 ## الإصدارات السابقة
+
+- **1.0.31 — Build 32:** [تحميل APK](https://github.com/Eslam-Salah/Masbahati-Updates/releases/download/v1.0.31/Masbahati-1.0.31.apk) · [ملاحظات الإصدار](https://github.com/Eslam-Salah/Masbahati-Updates/releases/tag/v1.0.31)
 
 - **1.0.30 — Build 31:** [تحميل APK](https://github.com/Eslam-Salah/Masbahati-Updates/releases/download/v1.0.30/Masbahati-1.0.30.apk) · [ملاحظات الإصدار](https://github.com/Eslam-Salah/Masbahati-Updates/releases/tag/v1.0.30)
 
