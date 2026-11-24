@@ -4,19 +4,19 @@
 
 ## أحدث إصدار رسمي
 
-- **الإصدار:** 1.0.32
-- **رقم البناء:** 33
-- **الوسم:** `v1.0.32`
-- **APK:** [Masbahati-1.0.32.apk](https://github.com/Eslam-Salah/Masbahati-Updates/releases/download/v1.0.32/Masbahati-1.0.32.apk)
-- **صفحة الإصدار:** https://github.com/Eslam-Salah/Masbahati-Updates/releases/tag/v1.0.32
-- **الحجم:** 2,493,026 بايت
-- **SHA-256 بحسب GitHub:** `9d431573a00ce5e121d61d5de45fba53b0088b784126dd591bac30986497258f`
+- **الإصدار:** 1.0.33
+- **رقم البناء:** 34
+- **الوسم:** `v1.0.33`
+- **APK:** [Masbahati-1.0.33.apk](https://github.com/Eslam-Salah/Masbahati-Updates/releases/download/v1.0.33/Masbahati-1.0.33.apk)
+- **صفحة الإصدار:** https://github.com/Eslam-Salah/Masbahati-Updates/releases/tag/v1.0.33
+- **الحجم:** 2,493,037 بايت
+- **SHA-256 بحسب GitHub:** `4acc26f6ac3d9671a39f040fe99610f8d768486f1e5295fa150842ca0950aa09`
 
-يجمع v1.0.32 تحسين شكل كروت أقسام الأذكار وتصغيرها، مع تحسين وضوح خيار العد بالضغط الاختياري ورسالة مدة قراءة الورد. بطاقات الأقسام تحافظ على تساوي ارتفاع الصف وامتداد الخلفية حتى مع تقدم جزئي أو اكتمال القسم.
-
-نجحت اختبارات Windows JVM وAndroid Lint وDebug في [اختبار التعديل](https://github.com/Eslam-Salah/Masbahati-Android/actions/runs/45276577055)، و[اختبار main](https://github.com/Eslam-Salah/Masbahati-Android/actions/runs/45278003102)، و[Build 33 النهائي](https://github.com/Eslam-Salah/Masbahati-Android/actions/runs/45279281320). APK وملف checksum منشوران؛ وما زال التحقق من العرض والتثبيت على هاتف فعلي مطلوبًا.
+يحسن v1.0.33 استقرار مراقبة التسبيح الصوتي وHands-Free باستخدام الزمن المنقضي في Android، مع الحفاظ على مدد التحذير والتوقف وإعادة الاستماع الحالية وقواعد العد والبيانات والتصميم. نجحت اختبارات الكود والبناء والتوقيع الأصلي والتحقق من هوية APK وبصمته. نُشر الملف الموقّع ذاته الذي اجتاز الفحوص؛ اختبار التثبيت والصوت على هاتف فعلي منفصل عن نجاح النشر.
 
 ## الإصدارات السابقة
+
+- **1.0.32 — Build 33:** [تحميل APK](https://github.com/Eslam-Salah/Masbahati-Updates/releases/download/v1.0.32/Masbahati-1.0.32.apk) · [ملاحظات الإصدار](https://github.com/Eslam-Salah/Masbahati-Updates/releases/tag/v1.0.32)
 
 - **1.0.31 — Build 32:** [تحميل APK](https://github.com/Eslam-Salah/Masbahati-Updates/releases/download/v1.0.31/Masbahati-1.0.31.apk) · [ملاحظات الإصدار](https://github.com/Eslam-Salah/Masbahati-Updates/releases/tag/v1.0.31)
 
