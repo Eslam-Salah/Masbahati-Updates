@@ -4,17 +4,19 @@
 
 ## أحدث إصدار رسمي
 
-- **الإصدار:** 1.0.33
-- **رقم البناء:** 34
-- **الوسم:** `v1.0.33`
-- **APK:** [Masbahati-1.0.33.apk](https://github.com/Eslam-Salah/Masbahati-Updates/releases/download/v1.0.33/Masbahati-1.0.33.apk)
-- **صفحة الإصدار:** https://github.com/Eslam-Salah/Masbahati-Updates/releases/tag/v1.0.33
-- **الحجم:** 2,493,037 بايت
-- **SHA-256 بحسب GitHub:** `4acc26f6ac3d9671a39f040fe99610f8d768486f1e5295fa150842ca0950aa09`
+- **الإصدار:** 1.0.34
+- **رقم البناء:** 35
+- **الوسم:** `v1.0.34`
+- **APK:** [Masbahati-1.0.34.apk](https://github.com/Eslam-Salah/Masbahati-Updates/releases/download/v1.0.34/Masbahati-1.0.34.apk)
+- **صفحة الإصدار:** https://github.com/Eslam-Salah/Masbahati-Updates/releases/tag/v1.0.34
+- **الحجم:** 2,493,028 بايت
+- **SHA-256 بحسب GitHub:** `a62932714727938e3372e618149cc56370ce3c66c286e9819d9a0893ee802bf5`
 
-يحسن v1.0.33 استقرار مراقبة التسبيح الصوتي وHands-Free باستخدام الزمن المنقضي في Android، مع الحفاظ على مدد التحذير والتوقف وإعادة الاستماع الحالية وقواعد العد والبيانات والتصميم. نجحت اختبارات الكود والبناء والتوقيع الأصلي والتحقق من هوية APK وبصمته. نُشر الملف الموقّع ذاته الذي اجتاز الفحوص؛ اختبار التثبيت والصوت على هاتف فعلي منفصل عن نجاح النشر.
+يوحّد إصدار v1.0.34 كارت الجلسة الصوتية وحالات الاستماع والاستعادة، مع عرض العدد والمدة وآخر نص تم التقاطه، ويُحسّن كروت المناسبات الإسلامية وتنسيق التاريخين الهجري والميلادي وفق الهوية البصرية للتطبيق. تتوقف مؤقتات عرض الواجهة أثناء توقف Activity وتستأنف عند العودة، دون تغيير قواعد العد أو البيانات. نُشر نفس APK الموقّع الذي اجتاز Signed QA، دون إعادة بناء أو تغيير مفتاح التوقيع. نجحت فحوص البناء والتحقق من الحزمة والإصدار والبصمة. اختبار التثبيت والواجهة والصوت على هاتف فعلي منفصل عن نجاح النشر.
 
 ## الإصدارات السابقة
+
+- **1.0.33 — Build 34:** [تحميل APK](https://github.com/Eslam-Salah/Masbahati-Updates/releases/download/v1.0.33/Masbahati-1.0.33.apk) · [ملاحظات الإصدار](https://github.com/Eslam-Salah/Masbahati-Updates/releases/tag/v1.0.33)
 
 - **1.0.32 — Build 33:** [تحميل APK](https://github.com/Eslam-Salah/Masbahati-Updates/releases/download/v1.0.32/Masbahati-1.0.32.apk) · [ملاحظات الإصدار](https://github.com/Eslam-Salah/Masbahati-Updates/releases/tag/v1.0.32)
 
