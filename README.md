@@ -4,17 +4,19 @@
 
 ## أحدث إصدار رسمي
 
-- **الإصدار:** 1.0.37
-- **رقم البناء:** 38
-- **الوسم:** `v1.0.37`
-- **APK:** [Masbahati-1.0.37.apk](https://github.com/Eslam-Salah/Masbahati-Updates/releases/download/v1.0.37/Masbahati-1.0.37.apk)
-- **صفحة الإصدار:** https://github.com/Eslam-Salah/Masbahati-Updates/releases/tag/v1.0.37
-- **الحجم:** 2,493,036 بايت
-- **SHA-256 بحسب GitHub:** `edbfe6ac955bdbe73c57bf83478361c450d018c7234438b3b332b8c1f2688ae2`
+- **الإصدار:** 1.0.38
+- **رقم البناء:** 39
+- **الوسم:** `v1.0.38`
+- **APK:** [Masbahati-1.0.38.apk](https://github.com/Eslam-Salah/Masbahati-Updates/releases/download/v1.0.38/Masbahati-1.0.38.apk)
+- **صفحة الإصدار:** https://github.com/Eslam-Salah/Masbahati-Updates/releases/tag/v1.0.38
+- **الحجم:** 2,493,042 بايت
+- **SHA-256 بحسب GitHub:** `134b3ac1ebf43c05988884ba3630beb37d7c5b2e12cd1d8a390ad89da3944189`
 
-يوحّد إصدار v1.0.37 الهوية البصرية والخلفيات والكروت والمسافات في الصفحات الرئيسية والأذكار والتسبيح وتقدمي والإعدادات والمناسبات، ويحسّن تخطيط الشاشة الصغيرة والخط الكبير ومحاذاة التاريخين والإحصائيات. لم تُضف صور أو مكتبات جديدة، ولا تغيير في قاعدة البيانات أو التوقيع. نُشر نفس APK الموقّع الذي اجتاز Signed QA دون إعادة بناء، بحجم أقل بأربعة بايت من الإصدار السابق. نجحت فحوص البناء والتحقق من الحزمة والإصدار والبصمة. المراجعة البصرية على هاتف فعلي منفصلة عن الفحوص البرمجية.
+يحسّن إصدار v1.0.38 تصميم نوافذ التأكيد والتنبيهات ورسائل التنزيل وحجم نافذة اكتمال الهدف، ويقلّل عمليات الترتيب وإعادة الحساب المتكررة في الواجهة، مع تنظيف الأكواد غير المستخدمة. لم تُضف صور أو مكتبات جديدة، ولا تغيير في قاعدة البيانات أو التوقيع. نُشر نفس APK الموقّع الذي اجتاز Signed QA دون إعادة بناء، بزيادة 6 بايت عن الإصدار السابق. نجحت فحوص البناء والحزمة والإصدار والبصمة. المراجعة البصرية وقياس الأداء على هاتف فعلي منفصلان عن الفحوص البرمجية.
 
 ## الإصدارات السابقة
+
+- **1.0.37 — Build 38:** [تحميل APK](https://github.com/Eslam-Salah/Masbahati-Updates/releases/download/v1.0.37/Masbahati-1.0.37.apk) · [ملاحظات الإصدار](https://github.com/Eslam-Salah/Masbahati-Updates/releases/tag/v1.0.37)
 
 - **1.0.36 — Build 37:** [تحميل APK](https://github.com/Eslam-Salah/Masbahati-Updates/releases/download/v1.0.36/Masbahati-1.0.36.apk) · [ملاحظات الإصدار](https://github.com/Eslam-Salah/Masbahati-Updates/releases/tag/v1.0.36)
 
