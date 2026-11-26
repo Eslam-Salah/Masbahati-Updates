@@ -1,0 +1,23 @@
+{
+  "repository": "Eslam-Salah/Masbahati-Updates",
+  "main": "135059ae98238cfac7d1837833143332c9b81cb9",
+  "branches": [
+    {
+      "name": "release/publish-v1.0.2",
+      "sha": "46a8f8355c288135e7b9919398e572ae53e68b62"
+    },
+    {
+      "name": "release/publish-v1.0.3",
+      "sha": "5ba40cbcc261a24b27435d66e99909f022085e96"
+    },
+    {
+      "name": "release/publish-v1.0.4",
+      "sha": "e86f0d1278c3e932b1ebd62e9ca63c10f081b101"
+    },
+    {
+      "name": "release/publish-v1.0.5",
+      "sha": "48a8905cf76e4a51007c3cc40420e937f79fe365"
+    }
+  ],
+  "privateQAs": []
+}
